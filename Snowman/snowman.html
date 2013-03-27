@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="theme.css">
+		
+		<script type="text/javascript" src="commonFunctions.js"></script>
+		
+	</head>
+
+	<body>
+	<!--	<div id="headshot">HEAD SHOT</div> !-->
+		<canvas id="myCanvas" width="490" height="580"/>
+
+	</body>
+
+	<script>
+			var canvas = document.getElementById('myCanvas');
+			var context = canvas.getContext('2d');
+			var centerX = canvas.width / 2;
+
+			canvas.addEventListener('click', headShot, false);
+
+			function configure()
+			{
+				context.lineWidth = 5;
+				context.fillStyle = '#FBFBE8';
+				context.strokeStyle = '#003300';
+			}
+
+			function drawSnowman()
+			 {
+				configure();
+
+				//left arm
+				drawLineWithShadow(centerX - 90, 180, centerX - 220, 260);
+				//right arm
+				drawLineWithShadow(centerX + 90, 180, centerX + 220, 260);
+
+				//tail
+				drawCircleWithShadow(centerX, 390, 140);
+				//sei la
+				drawCircleWithShadow(centerX, 220, 100);
+				//head
+				drawCircleWithShadow(centerX, 80, 60);
+
+				//left eye
+				drawCircle(centerX - 29, 80, 5);
+				//right eye
+				drawCircle(centerX + 29, 80, 5);
+
+				//mouth
+				drawCurveLine();
+			}
+
+			function headShot (event) {
+        		var x = event.layerX;
+        		var y = event.layerY;
+				
+				var isXinHead = ( x < centerX + 60) && ( x > centerX - 60);
+				var isYinHead = ( y < 80 +60) && (y > 80 - 60);
+				
+				if(isXinHead && isYinHead)
+					alert('HEAD SHOT');
+			}
+
+			drawSnowman();
+		</script>
+	
+</html>
