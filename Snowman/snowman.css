@@ -1,0 +1,50 @@
+<style>
+		body
+		{
+			margin: 0px;
+			padding: 0px;
+		}
+
+		@font-face
+		{
+			font-family: zombieFont;
+			src: url('28DaysLater.ttf');
+		}
+		
+		#headshot
+		{
+			z-index: 1;
+			font-family: zombieFont;
+			color: red;
+			font-size: 100px;
+
+			/* center*/
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			/*display: -webkit-box; */
+			display:  none;;
+			-webkit-box-pack:center;
+			-webkit-box-align:center;
+		}
+		
+		#canvas
+		{
+		/*TODO: tirar tamanho daqui
+			width: 490px;
+			height: 580px; */
+			position: absolute;
+			background-color: 'red';
+			-webkit-animation:mymove 4s infinite;
+		}
+		
+		@-webkit-keyframes mymove
+		{
+			0% { left:0px; }
+
+			50%{ left: 600px; }
+
+			100%{ left: 0px; }
+		}
+
+ </style>

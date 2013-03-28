@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="theme.css">
+		<link rel="stylesheet" type="text/css" href="snowman.css">
 		
-		<script type="text/javascript" src="commonFunctions.js"></script>
+		<script type="text/javascript" src="../commonFunctions.js"></script>
 		
 	</head>
 
 	<body>
-	<!--	<div id="headshot">HEAD SHOT</div> !-->
-		<canvas id="myCanvas" width="490" height="580"/>
+		<div id="headshot">HEAD SHOT</div>
+		<canvas id="canvas" width="490" height="580"/>
 
 	</body>
 
 	<script>
-			var canvas = document.getElementById('myCanvas');
+			var canvas = document.getElementById('canvas');
 			var context = canvas.getContext('2d');
 			var centerX = canvas.width / 2;
 
@@ -59,8 +59,17 @@
 				var isXinHead = ( x < centerX + 60) && ( x > centerX - 60);
 				var isYinHead = ( y < 80 +60) && (y > 80 - 60);
 				
-				if(isXinHead && isYinHead)
-					alert('HEAD SHOT');
+				var message = document.getElementById('headshot');
+
+				if(isXinHead && isYinHead){
+					message.style.display = '-webkit-box';
+					setTimeout(hideHeadshot, 600);
+				}	
+			}
+
+			function hideHeadshot (){
+				var message = document.getElementById('headshot');
+				message.style.display = 'none';
 			}
 
 			drawSnowman();
