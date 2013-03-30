@@ -3,6 +3,7 @@
 		{
 			margin: 0px;
 			padding: 0px;
+			background-color: #272822;
 		}
 
 		@font-face
@@ -34,7 +35,6 @@
 			width: 490px;
 			height: 580px; */
 			position: absolute;
-			background-color: 'red';
 			-webkit-animation:mymove 4s infinite;
 		}
 		

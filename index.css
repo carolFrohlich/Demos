@@ -1,0 +1,54 @@
+<style>
+
+	@font-face
+	{
+		font-family: unicornFont;
+		src: url('CompleteinHim.ttf');
+	}
+
+	body
+	{
+		background-color:#272822;
+		font-family: unicornFont;
+		padding: 0px;
+	}
+
+	h1
+	{
+		font-size: 110px;
+		margin:  0px;
+	}
+
+	h2
+	{
+		font-size: 65px;
+		margin:  0px 0px 50px 0px;
+	}
+
+	.functionCall { color: #D0F7A6; }
+
+	.comment { color: #75715E; }
+
+	.link
+	{
+		font-size: 40px;
+		color: #A6E22E;
+	}
+
+	.tile
+	{
+		border: 2px solid;
+		border-color: #232217;
+		border-radius: 25px;
+		width: 180px;
+		height: 25px;
+	}
+
+	/*color*/
+	.red { background-color: #FF0000; }
+
+	.orange { background-color:#FF6600; }
+
+	/*position*/
+	.two { margin-left:210px; }
+	</style>
