@@ -1,17 +1,30 @@
 <style>
-
 	@font-face
 	{
-		font-family: unicornFont;
-		src: url('CompleteinHim.ttf');
+    	font-family: 'complete_in_himregular';
+    	src: url('assets/fonts/CompleteinHim/completeinhim-webfont.eot');
+    	src: url('assets/fonts/CompleteinHim/completeinhim-webfont.svg#complete_in_himregular') format('svg'), 
+    	 	url('assets/fonts/CompleteinHim/completeinhim-webfont.eot?#iefix') format('embedded-opentype'),
+         	url('assets/fonts/CompleteinHim/completeinhim-webfont.woff') format('woff'),
+         	url('assets/fonts/CompleteinHim/completeinhim-webfont.ttf') format('truetype');
+    	font-weight: normal;
+    	font-style: normal;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		@font-face {
+			font-family: 'complete_in_himregular';
+			src: url('assets/fonts/CompleteinHim/completeinhim-webfont.svg') format('svg');
+		}
 	}
 
 	body
 	{
 		background-color:#272822;
-		font-family: unicornFont;
 		padding: 0px;
-	}
+		font-family: 'complete_in_himregular';
+		font-size: 20px;
+	} 
 
 	h1
 	{
@@ -33,6 +46,7 @@
 	{
 		font-size: 40px;
 		color: #A6E22E;
+		text-decoration: none;
 	}
 
 	.tile
@@ -49,6 +63,21 @@
 
 	.orange { background-color:#FF6600; }
 
+	.yellow { background-color: #FFFF00; }
+
+	.green { background-color: #00FF00; }
+
 	/*position*/
 	.two { margin-left:210px; }
-	</style>
+
+	.three { margin-left: 420px; }
+
+	.four { margin-left: 630px; }
+
+	.bot 
+	{ 	
+		position: absolute;	
+		bottom: 0;
+	}
+
+</style>
