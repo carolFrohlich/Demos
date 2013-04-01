@@ -60,13 +60,18 @@
 	}
 
 	/*color*/
-	.red { background-color: #FF0000; }
+	.red { background-color: #E81B16; }
 
-	.orange { background-color:#FF6600; }
+	.orange { background-color:#E67A1B; }
 
-	.yellow { background-color: #FFFF00; }
+	.yellow { background-color: #F2D43F; }
 
-	.green { background-color: #00FF00; }
+	.green { background-color: #61C155; }
+
+	/* azul #048091
+	   rosa #D1026C
+	   roxo #492D61
+	 */
 
 	/*position*/
 	.two { margin-left:210px; }
