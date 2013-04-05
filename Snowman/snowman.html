@@ -2,12 +2,13 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="snowman.css">
-		
+		<link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="../commonFunctions.js"></script>
-		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.keyframes.js"></script>
 	</head>
 
-	<body>
+	<body onresize="resize()">
 		<div id="headshot">HEAD SHOT</div>
 		<canvas id="canvas" width="490" height="580"/>
 	</body>
@@ -19,15 +20,13 @@
 
 			canvas.addEventListener('click', headShot, false);
 
-			function configure()
-			{
+			function configure(){
 				context.lineWidth = 5;
 				context.fillStyle = '#FBFBE8';
 				context.strokeStyle = '#003300';
 			}
 
-			function drawSnowman()
-			{
+			function drawSnowman(){
 				configure();
 
 				//left arm
@@ -71,9 +70,27 @@
 				message.style.display = 'none';
 			}
 
+			function resize () {
+				var bcode = $.keyframe.browserCode();
+				$.fn.addKeyframe(
+				{
+				    name: "mymove",
+				    "0%": bcode + "0% { left:0px; }",
+				    "50%": bcode + "50%{ left: 200px; }",
+				    "100%": bcode + "100%{ left: 0px; }"
+				});
+
+				$('#canvas').resetKeyframe(function() {
+					$('#canvas').playKeyframe({
+	               		name: 'mymove',
+	                	duration: 900,
+	                	repeat: 'infinite'
+	            	}, null);
+				}); 
+			}
+
 			drawSnowman();
-			
-			
+				
 		</script>
-	
 </html>
+
